@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style1.css">
+    <title>Add Employee</title>
+</head>
+<body>
+    <main>
+        <button id="toggle">x</button>
+        <div id="nav">
+            <div id="admin">
+                <img src="image.jpg" alt="">
+                <div id="adminD">
+                    <h2>Haris Ahmad </h2>
+                    <span id="tag">Admin</span>
+                </div>
+            </div>
+            <div id="Options">
+                <p>Features</p>
+                <div class="option">
+                    <img src="" alt="">
+                    <a href="index.html"><span>Dashboard</span></a>
+                </div>
+                <div class="option selected">
+                    <img src="" alt="">
+                    <a href="add employee.html"><span>Add Employee</span></a>
+                </div>
+                <div class="option">
+                    <img src="" alt="">
+                    <a href="edit employee.html"><span>Edit Employee</span></a>
+                </div>
+            </div>
+        </div>
+        <div id="display">
+            <h1>Employee Management System</h1>
+            <h2>Add Employee</h2>
+            <div id="AddSection">
+                    <div class="addSdiv" id="imageSect">
+                        <img src="default image.jpg" alt="" id="inputImage">
+                        <input type="file" id="inputFile" class="inputDetial">
+                    </div>
+                    <div class="addSdiv">
+                        <label for="id">ID</label>
+                        <input type="text" name="id" id="id" class="id inputDetail"> 
+                    </div>
+                    <div class="addSdiv">
+
+                        <label for="name">Full Name</label>
+                        <input type="text" name="fullname" id="name" class="inputDetail">
+                    </div>
+                    <div class="addSdiv">
+
+                        <label for="designation">Designation</label>
+                        <input type="text" name="Designation" id="designation" class="inputDetail">
+                    </div>
+                    <div class="addSdiv">
+
+                        <label for="salary">Salary</label>
+                        <input type="number" name="salary" id="salary" class="inputDetail">
+                    </div>
+                    <button id="addbtn" class="btn">Add</button>
+            </div>
+        </div>
+    </main>
+
+
+<script type="module" src="add.js"></script>
+</body>
+</html>
