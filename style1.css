@@ -1,0 +1,494 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap');
+
+:root {
+    --primary: #4f46e5; /* Sophisticated Indigo */
+    --primary-light: #818cf8;
+    --primary-hover: #4338ca;
+    --bg-main: #f1f5f9;
+    --sidebar-bg: #ffffff;
+    --text-main: #0f172a;
+    --text-muted: #64748b;
+    --border: #e2e8f0;
+    --white: #ffffff;
+    --accent: #f5f3ff;
+    --shadow-sm: 0 1px 3px rgba(0,0,0,0.1);
+    --shadow-md: 0 4px 6px -1px rgba(0,0,0,0.1), 0 2px 4px -1px rgba(0,0,0,0.06);
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial;
+    /* font-family: 'Inter', sans-serif; */
+}
+
+body {
+    background-color: var(--bg-main);
+    color: var(--text-main);
+    line-height: 1.5;
+}
+
+main {
+    display: flex;
+    min-height: 100vh;
+}
+
+/* --- Sidebar Styling --- */
+#nav {
+    width: 280px;
+    background: var(--sidebar-bg);
+    border-right: 1px solid var(--border);
+    padding: 2rem 1.25rem;
+    display: flex;
+    flex-direction: column;
+    position: sticky;
+    top: 0;
+    height: 100vh;
+}
+
+#admin {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    padding: 1rem;
+    background: var(--accent);
+    border-radius: 12px;
+    margin-bottom: 2rem;
+}
+
+#admin img {
+    width: 44px;
+    height: 44px;
+    border-radius: 10px; /* Modern squircle */
+    object-fit: cover;
+    box-shadow: var(--shadow-sm);
+}
+
+#adminD h2 {
+    font-size: 0.99rem;
+    font-weight: 700;
+    color: var(--text-main);
+}
+
+#tag {
+    font-size: 0.9rem;
+    color: var(--primary);
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+    font-weight: 700;
+}
+
+#Options p {
+    font-size: 0.75rem;
+    font-weight: 600;
+    color: var(--text-muted);
+    margin: 1.5rem 0 0.75rem 0.75rem;
+    text-transform: uppercase;
+}
+
+.option a {
+    text-decoration: none;
+    color: var(--text-muted);
+    display: flex;
+    align-items: center;
+    padding: 0.8rem 1rem;
+    border-radius: 10px;
+    transition: all 0.2s cubic-bezier(0.4, 0, 0.2, 1);
+    font-size: 1.5rem;
+    font-weight: 500;
+}
+
+.option:hover a {
+    background: var(--accent);
+    color: var(--primary);
+    transform: translateX(4px);
+}
+
+.option.selected a {
+    background: var(--primary);
+    color: var(--white);
+    box-shadow: 0 4px 12px rgba(79, 70, 229, 0.25);
+}
+
+/* --- Main Content Area --- */
+#display {
+    flex: 1;
+    padding: 3rem;
+    max-width: 1300px;
+    margin: 0 auto;
+}
+
+#display h1 {
+    font-size: 3rem;
+    font-weight: 800;
+    letter-spacing: -0.02em;
+    background: linear-gradient(90deg, #0f172a, #4f46e5);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+#display h2 {
+    font-size: 1.5rem;
+    color: var(--text-muted);
+    margin-bottom: 2.5rem;
+    font-weight: 400;
+}
+
+/* --- Search UI --- */
+.search-container {
+    display: flex;
+    gap: 12px;
+    margin-bottom: 2rem;
+}
+
+#search {
+    flex: 1;
+    max-width: 400px;
+    padding: 0.75rem 1.25rem;
+    border: 1px solid var(--border);
+    border-radius: 10px;
+    background: var(--white);
+    transition: all 0.2s;
+}
+
+#search:focus {
+    outline: none;
+    border-color: var(--primary-light);
+    box-shadow: 0 0 0 4px rgba(79, 70, 229, 0.1);
+}
+
+.btn {
+    padding: 0.75rem 1.5rem;
+    background: var(--primary);
+    color: white;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+    font-weight: 600;
+    transition: all 0.2s;
+}
+
+.btn:hover {
+    background: var(--primary-hover);
+    transform: translateY(-1px);
+    box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+}
+
+/* --- Data Table --- */
+#data {
+    margin-top: 10px;
+    background: var(--white);
+    border-radius: 16px;
+    box-shadow: var(--shadow-md);
+    overflow: auto;
+    border: 1px solid var(--border);
+}
+
+#title {
+    display: grid;
+    grid-template-columns: 0.8fr 0.5fr 1.5fr 1.5fr 1fr 1fr;
+    gap: 2px;
+    background: #fafafa;
+    padding: 1.25rem;
+    border-bottom: 1px solid var(--border);
+    color: var(--text-muted);
+    font-size: 0.9rem;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+    font-weight: 700;
+    min-width: 300px;
+}
+#title li{
+    list-style-type: none;
+    color: blue;
+}
+
+#value {
+    display: grid;
+    grid-template-columns: 0.8fr 0.5fr 1.5fr 1.5fr 1fr 1fr;
+    padding: 1.25rem;
+    border-bottom: 1px solid #f8fafc;
+    transition: background 0.2s;
+    align-items: center;
+}
+#value li{
+    list-style-type: none;
+}
+
+#value:hover {
+    background: #f8fafc;
+}
+.table-img {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    object-fit: cover;
+    background: var(--accent);
+    border: 2px solid var(--white);
+    box-shadow: var(--shadow-sm);
+}
+.remove {
+    background: #fee2e2;
+    color: #dc2626;
+    border: none;
+    padding: 6px 12px;
+    border-radius: 6px;
+    font-weight: 600;
+    font-size: 0.75rem;
+    cursor: pointer;
+    transition: 0.2s;
+}
+
+.remove:hover {
+    background: #dc2626;
+    color: white;
+}
+
+/* --- Employee Profile Card --- */
+.employee-card {
+    display: none;
+    position: fixed;
+    right: 40px;
+    bottom: 40px;
+    width: 340px;
+    background: rgba(255, 255, 255, 0.9);
+    backdrop-filter: blur(12px); /* Glassmorphism */
+    box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.15);
+    border-radius: 24px;
+    overflow: hidden;
+    border: 1px solid rgba(255, 255, 255, 0.5);
+    z-index: 100;
+    animation: slideUp 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+    text-align: center;
+}
+
+@keyframes slideUp {
+    from { transform: translateY(20px); opacity: 0; }
+    to { transform: translateY(0); opacity: 1; }
+}
+
+.header-accent {
+    height: 100px;
+    background: linear-gradient(135deg, var(--primary) 0%, #7c3aed 100%);
+}
+
+.profile-img {
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    border: 5px solid var(--white);
+    margin-top: -50px;
+    background: #cbd5e1;
+    box-shadow: var(--shadow-md);
+}
+
+.employee-card h2 {
+    font-weight: 700;
+    margin-top: 1rem;
+}
+
+.info-section {
+    padding: 2rem;
+    background: transparent;
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+.info-item {
+    background: white;
+    padding: 10px 15px;
+    border-radius: 10px;
+    border: 1px solid var(--border);
+}
+/* --- Add/Edit Section Container --- */
+/* --- Add/Edit Section Container --- */
+#AddSection {
+    background: var(--white);
+    padding: 2.5rem;
+    border-radius: 16px;
+    box-shadow: var(--shadow-md);
+    border: 1px solid var(--border);
+    max-width: 900px; /* Increased width to accommodate the row layout */
+    margin-top: 1rem;
+    
+    /* Grid Layout for Rows */
+    display: grid;
+    grid-template-columns: repeat(2, 1fr); /* Two equal columns */
+    gap: 1.5rem 2rem; /* Vertical gap and Horizontal gap */
+    align-items: end; /* Aligns the button with the inputs */
+}
+
+/* Individual Form Groups */
+.addSdiv {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+}
+#imageSect{
+    grid-column: span 2;
+    align-items: center;
+}
+#inputImage{
+    height: 70px;
+    width: 70px;
+    border-radius: 50%;
+}
+/* Make the button span full width or stay in the grid */
+#addbtn {
+    grid-column: span 2; /* Makes button span across both columns */
+    margin-top: 1rem;
+    padding: 1rem;
+    font-size: 1rem;
+    height: 50px; /* Matching height to inputs for balance */
+}
+#addCbtn{
+    grid-column: span 2;
+    margin-top: 1rem;
+    padding: 1rem;
+    font-size: 1rem;
+    height: 50px;
+}
+
+/* Label Styling */
+.addSdiv label {
+    font-size: 0.85rem;
+    font-weight: 600;
+    color: var(--text-main);
+}
+
+/* Input Fields */
+.inputDetail {
+    padding: 0.8rem 1rem;
+    border: 1px solid var(--border);
+    border-radius: 10px;
+    font-size: 0.95rem;
+    background: #fcfcfd;
+    transition: all 0.2s ease;
+}
+#toggle{
+    display: none;
+    position:absolute;
+    z-index: 2;
+    height: 20px;
+    width: 20px;
+    /* margin-left: 5px; */
+    border: none;
+    background-color: transparent;
+    font-size: 18px;
+}
+.inputDetail:focus {
+    outline: none;
+    border-color: var(--primary-light);
+    box-shadow: 0 0 0 4px rgba(79, 70, 229, 0.1);
+}
+#searchvalue{
+    max-width: 400px;
+    padding: 0.75rem 1.25rem;
+    border: 1px solid var(--border);
+    border-radius: 10px;
+    background: var(--white);
+    transition: all 0.2s;
+    margin-right: 10px;
+}
+#EinputImage{
+    height: 70px;
+    width: 70px;
+    border-radius: 50%;
+}
+
+
+
+/* Responsive: Stack back to column on small screens */
+@media (max-width: 600px) {
+    #AddSection {
+        grid-template-columns: 1fr;
+    }
+    #addbtn {
+        grid-column: span 1;
+    }
+    #addCbtn{
+        grid-column: span 1;
+    }
+}
+
+/* Specific styling for the 'number' input to remove arrows if desired */
+input[type=number]::-webkit-inner-spin-button, 
+input[type=number]::-webkit-outer-spin-button { 
+    -webkit-appearance: none; 
+    margin: 0; 
+}
+
+
+
+
+
+
+
+
+/* --- Responsive Layout --- */
+@media (max-width: 768px) {
+    #nav { 
+        display: none;
+        position:absolute;
+        width: 100px; 
+        padding: 1rem 0.5rem; 
+        align-items: center; 
+        height: 100%;
+    }
+    #toggle{
+        display: block;
+    }
+    /* #admin h2, #tag, #Options p, .option span { display: none; } */
+   
+    .employee-card { width: 90%; right: 5%; bottom: 20px; }
+    #admin{
+        flex-direction: column;
+    }
+    #Options p{
+        font-size: 8px;
+        color: rgb(182, 182, 250);
+    }
+    .option a{
+        font-size: 10px;
+    }
+     #display { padding:10px; }
+     #display h1{
+        font-size: 18px;
+     }
+     #display #title{
+        font-size: 10px;
+     }
+     #display #value{
+        font-size: 10px;
+     }
+     #display .print{
+        font-size: 8px;
+        padding:5px;
+        border-radius: 3px;
+     }
+     #display .remove{
+        font-size: 8px;
+        padding:5px;
+        border-radius: 3px;
+     }
+     #display .table-img{
+        width: 25px;
+        height: 25px;
+     }
+     #display li{
+        font-size: 10px;
+     }
+     #AddSection{
+        padding: 10px;
+     }
+     #addSdiv label{
+        font-size: 10px;
+     }
+     #display #search,
+     #display #searchbtn{
+        padding: 10px;
+        font-size: 12px;
+     }
+}

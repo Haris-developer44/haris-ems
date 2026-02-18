@@ -1,0 +1,1 @@
+export let employeesData=JSON.parse(localStorage.getItem("employeesData")) || [];
