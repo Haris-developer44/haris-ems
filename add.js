@@ -14,17 +14,12 @@ toggleBtn.addEventListener("click",()=>{
     let nav=document.getElementById("nav");
     if(nav.style.display=='none'){
         nav.style.display='inline-block';
-<<<<<<< HEAD
         toggleBtn.innerText='✖';
-    }else{
+    }
+    else{
         display.style.marginLeft='0';
         nav.style.display='none';
         toggleBtn.innerText='☰';
-=======
-    }else{
-        display.style.marginLeft='0';
-        nav.style.display='none';
->>>>>>> ems/main
     }
 })
 let imageFile=document.getElementById("inputFile");
@@ -76,19 +71,3 @@ function addtoEmployee(){
     salary.value='';
     generateId();
 }
-<<<<<<< HEAD
-=======
-
-// function remove(i){
-//     let confirm= prompt(`Are you sure to remove the employee: ${employeesData[i].name} with id ${employeesData[i].id}\n Enter y/n`);
-//     if(confirm=='y' || confirm==='Y'){
-//         employeesData.splice(i,1);
-//         console.log(`${employeesData[i]} is spliced`);
-//         alert("Employees Data is deleted successfully")
-//         loadData();
-//     }
-//     else{
-//         alert("Employee Data is not deleted")
-//     }
-// }
->>>>>>> ems/main
