@@ -69,5 +69,6 @@ function addtoEmployee(){
     name.value='';
     designation.value='';
     salary.value='';
+    image.setAttribute("src","./default image.jpg");
     generateId();
 }

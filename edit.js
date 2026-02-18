@@ -48,6 +48,7 @@ Ebtn.addEventListener("click",()=>{
             Ename.value='';
             Edesignation.value='';
             Esalary.value='';
+            EinputImage.setAttribute("src","./default image.jpg");
             console.log(employeesData[index]);
         }
         localStorage.setItem("employeesData",JSON.stringify(employeesData))
@@ -59,16 +60,10 @@ toggleBtn.addEventListener("click",()=>{
     let nav=document.getElementById("nav");
     if(nav.style.display=='none'){
         nav.style.display='inline-block';
-<<<<<<< HEAD
         toggleBtn.innerText='✖';
     }else{
         display.style.marginLeft='0';
         nav.style.display='none';
         toggleBtn.innerText='☰';
-=======
-    }else{
-        display.style.marginLeft='0';
-        nav.style.display='none';
->>>>>>> ems/main
     }
 })

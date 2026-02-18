@@ -90,6 +90,9 @@ function search(name){
     searchData.forEach((value,index)=>{
         dataSection.innerHTML+=
         `<ul id="value">
+        <li>
+                <img src="${value.image}" alt="Profile" class="table-img">
+            </li>
         <li>${value.id}</li>
         <li>${value.name}</li>
         <li>${value.designation}</li>
