@@ -59,10 +59,16 @@ toggleBtn.addEventListener("click",()=>{
     let nav=document.getElementById("nav");
     if(nav.style.display=='none'){
         nav.style.display='inline-block';
+<<<<<<< HEAD
         toggleBtn.innerText='✖';
     }else{
         display.style.marginLeft='0';
         nav.style.display='none';
         toggleBtn.innerText='☰';
+=======
+    }else{
+        display.style.marginLeft='0';
+        nav.style.display='none';
+>>>>>>> ems/main
     }
 })
