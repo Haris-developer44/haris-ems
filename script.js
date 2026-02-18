@@ -15,7 +15,7 @@ togglebtn.addEventListener("click",()=>{
     let display=document.getElementById("display")
     let nav=document.getElementById("nav");
     if(nav.style.display=='none'){
-        nav.style.display='inline-block';
+        nav.style.display='flex';
         togglebtn.innerText='✖';
     }else{
         display.style.marginLeft='0';

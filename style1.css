@@ -42,6 +42,7 @@ main {
     padding: 2rem 1.25rem;
     display: flex;
     flex-direction: column;
+    justify-content: space-between;
     position: sticky;
     top: 0;
     height: 100vh;
@@ -79,12 +80,8 @@ main {
     font-weight: 700;
 }
 
-#Options p {
-    font-size: 0.75rem;
-    font-weight: 600;
-    color: var(--text-muted);
-    margin: 1.5rem 0 0.75rem 0.75rem;
-    text-transform: uppercase;
+#Options{
+    margin-top: 20px;
 }
 
 .option a {
@@ -126,6 +123,7 @@ main {
     background: linear-gradient(90deg, #0f172a, #4f46e5);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
+    margin-bottom: 10px;
 }
 
 #display h2 {
@@ -305,8 +303,11 @@ main {
 #disappear{
     border: none;
     background-color: transparent;
-    color: white;
+    color: rgb(255, 255, 255);
     font-size: 18px;
+    position:absolute;
+    right: 15px;
+    top: 5px;
 }
 /* --- Add/Edit Section Container --- */
 /* --- Add/Edit Section Container --- */
@@ -316,12 +317,14 @@ main {
     border-radius: 16px;
     box-shadow: var(--shadow-md);
     border: 1px solid var(--border);
-    max-width: 900px; /* Increased width to accommodate the row layout */
+    max-width: 600px; /* Increased width to accommodate the row layout */
     margin-top: 1rem;
     
     /* Grid Layout for Rows */
     display: grid;
-    grid-template-columns: repeat(2, 1fr); /* Two equal columns */
+    /* grid-template-columns: repeat(2, 1fr); Two equal columns */
+    grid-template-columns: 1fr 1fr;
+    /* grid-template-rows: 1fr 1fr 1fr; */
     gap: 1.5rem 2rem; /* Vertical gap and Horizontal gap */
     align-items: end; /* Aligns the button with the inputs */
 }
@@ -333,8 +336,11 @@ main {
     gap: 0.5rem;
 }
 #imageSect{
-    grid-column: span 2;
+    display: flex;
+    flex-direction: columns;
     align-items: center;
+    grid-column: span 2;
+
 }
 #inputImage{
     height: 70px;
