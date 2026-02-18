@@ -8,7 +8,7 @@ export let employeesData=JSON.parse(localStorage.getItem("employeesData")) || [
     },
     {
         image: "image 2.jpg",
-        id: 1001,
+        id: 1002,
         name: "Emma",
         designation:"Web Dev",
         salary: 150000
