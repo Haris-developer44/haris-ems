@@ -302,6 +302,12 @@ main {
     border-radius: 10px;
     border: 1px solid var(--border);
 }
+#disappear{
+    border: none;
+    background-color: transparent;
+    color: white;
+    font-size: 18px;
+}
 /* --- Add/Edit Section Container --- */
 /* --- Add/Edit Section Container --- */
 #AddSection {
