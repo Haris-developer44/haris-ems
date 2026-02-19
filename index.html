@@ -3,82 +3,35 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link rel="stylesheet" href="style1.css">
-    <title>EMS</title>
+    <title>login</title>
 </head>
 <body>
-    <main>
-        <button id="toggle">☰</button>
-        <div id="nav">
-            <!-- <div id="admin">
-                <img src="image.jpg" alt="">
-                <div id="adminD">
-                    <h2>Haris Ahmad </h2>
-                    <span id="tag">Admin</span>
-                </div>
-            </div> -->
-            <div id="Options">
-                <div class="option selected">
-                    <a href="index.html">Dashboard</a>
-                </div>
-                <div class="option">
-                    <a href="add employee.html">Add Employee</a>
-                </div>
-                <div class="option">
-                    <a href="edit employee.html">Edit Employee</a>
-                </div>
-            </div>
-            <div id="admin">
-                <img src="image.jpg" alt="">
-                <div id="adminD">
-                    <h2>Haris Ahmad </h2>
-                    <span id="tag">Admin</span>
-                </div>
-            </div>
+    <div class="login-container">
+    <div class="login-card">
+        <div class="login-header">
+            <div class="logo-placeholder">EMS</div>
+            <h1>Welcome Back</h1>
+            <p>Please enter your details to sign in.</p>
         </div>
-        <div id="display">
-            <h1>Employee Management System</h1>
-            <h2>Dashboard</h2>
-            <input type="search" placeholder="Search Employee" id="search">
-            <button class="searchbtn btn">Search</button>
-            <div id="data">
-                <ul id="title">
-                    <li>Photo</li>
-                    <li>Id</li>
-                    <li>Name</li>
-                    <li>Designation</li>
-                    <li>Salary</li>
-                    <li>Card</li>
-                </ul>
-                <div id="employeedata">
-                    
-                </div>
+        <form id="loginForm">
+            <div class="addSdiv">
+                <label for="username">Email Address</label>
+                <input type="text" id="username" class="inputDetail" placeholder="username" required>
+                <p id="us-error" class="error"></p>
             </div>
-        </div>
-        
-        
-
-
-        <div class="employee-card">
-            <div class="header-accent"><button id="disappear">✖</button></div>
-            <img src="" alt="Employee Photo" class="profile-img">
-            <h2>Alex Rivers</h2>
-            <p class="title">Senior Product Designer</p>
             
-            <div class="info-section">
-                <div class="info-item">
-                <span>ID:</span> <strong>#8829-PX</strong>
-                </div>
-                <div class="info-item">
-                <span>Deignation:</span> <strong>Creative Ops</strong>
-                </div>
+            <div class="addSdiv">
+                <label for="password">Password</label>
+                <input type="password" id="password" class="inputDetail" placeholder="••••••••" required>
+                <p id="psw-error" class="error"></p>
             </div>
-        </div>
 
-    </main>
-
-    <script type="module" src="script.js"></script>
+            <button type="submit" class="btn login-btn">Sign In</button>
+        </form>
+        
+    </div>
+</div>
+<script src="login.js"></script>
 </body>
 </html>
