@@ -1,5 +1,7 @@
 import { employeesData } from "./data.js";
-
+if (localStorage.getItem("IsLoggedIn") !== "true") {
+    window.location.href = "index.html";
+}
 let searchbtn=document.getElementsByClassName("searchbtn")[0];
 let SId= document.getElementById("searchvalue");
 let Ebtn=document.getElementById("addCbtn");

@@ -1,4 +1,7 @@
 import { employeesData } from "./data.js";
+if (localStorage.getItem("IsLoggedIn") !== "true") {
+    window.location.href = "index.html";
+}
 let addbtn = document.querySelector("#addbtn");
 let id=document.getElementsByClassName("id")[0];
 console.log(id)

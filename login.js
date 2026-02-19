@@ -7,23 +7,22 @@ let adminData={
     password: "admin@123"
 }
 let error="Incorrect";
-console.log("admin@123"===adminData.password)
 form.addEventListener("submit",(e)=>{
     e.preventDefault();
     if(username.value===adminData.username && password.value===adminData.password){
+        localStorage.setItem("IsLoggedIn","true")
         window.location.href= "./home.html"
     }
-    else if(username.value!==adminData.username){
+    if(username.value!==adminData.username){
         let userError=document.getElementById("us-error");
-
         userError.innerText=error
     }
-    else if(password!==adminData.password){
+    if(password.value!==adminData.password){
         let pswError=document.getElementById("psw-error")
     
         pswError.innerText=error
     }
     else{
-        alert("Enter correct username and password")
+        alert("fill the fields")
     }
 })

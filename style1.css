@@ -47,8 +47,13 @@ main {
     top: 0;
     height: 100vh;
 }
-
+#adminSect{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
 #admin {
+    flex: 1;
     display: flex;
     align-items: center;
     gap: 12px;
@@ -457,6 +462,12 @@ input[type=number]::-webkit-outer-spin-button {
         display: block;
         font-size: 25px;
     }
+    #signout{
+    font-size: 8px;
+    padding: 3px;
+    border-radius: 2px;
+    margin: 5px;
+}
     /* #admin h2, #tag, #Options p, .option span { display: none; } */
    
     .employee-card { width: 90%; right: 5%; bottom: 20px; }

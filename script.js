@@ -1,4 +1,7 @@
 import { employeesData } from "./data.js";
+if (localStorage.getItem("IsLoggedIn") !== "true") {
+    window.location.href = "index.html";
+}
 loadData()
 let searchbtn=document.getElementsByClassName("searchbtn")[0];
 searchbtn.addEventListener('click',()=>{
@@ -8,6 +11,12 @@ searchbtn.addEventListener('click',()=>{
 })
 let printbtn=document.getElementById("print");
 let card=document.getElementsByClassName('employee-card')[0];
+let SignOut=document.getElementById("signout");
+console.log(SignOut)
+SignOut.addEventListener("click",()=>{
+    localStorage.setItem("IsLoggedIn","false")
+    window.location.href="./index.html";
+})
 
 
 let togglebtn=document.getElementById('toggle');
