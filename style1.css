@@ -11,7 +11,7 @@
     --border: #e2e8f0;
     --white: #ffffff;
     --accent: #f5f3ff;
-    --shadow-sm: 0 1px 3px rgba(0,0,0,0.1);
+    --shadow-sm: 0 0 15px -1px rgba(0,0,0,0.1);
     --shadow-md: 0 4px 6px -1px rgba(0,0,0,0.1), 0 2px 4px -1px rgba(0,0,0,0.06);
 }
 
@@ -37,6 +37,7 @@ main {
 /* --- Sidebar Styling --- */
 #nav {
     width: 280px;
+    height: 100vh;
     background: var(--sidebar-bg);
     border-right: 1px solid var(--border);
     padding: 2rem 1.25rem;
@@ -45,7 +46,6 @@ main {
     justify-content: space-between;
     position: sticky;
     top: 0;
-    height: 100vh;
 }
 #adminSect{
     display: flex;
@@ -63,14 +63,19 @@ main {
     margin-bottom: 2rem;
 }
 
-#admin img {
-    width: 44px;
-    height: 44px;
-    border-radius: 10px; /* Modern squircle */
-    object-fit: cover;
+#admin #img {
+    width: 50px;
+    height: 50px;
+    padding-left: 5px;
+    padding-top: 9px;
+    border-radius: 50%; /* Modern squircle */
+    /* background-color: #4338ca; */
+    /* object-fit: cover; */
     box-shadow: var(--shadow-sm);
 }
-
+#logo{
+    width: 40px;
+}
 #adminD h2 {
     font-size: 0.99rem;
     font-weight: 700;
@@ -551,7 +556,9 @@ input[type=number]::-webkit-outer-spin-button {
     background: radial-gradient(circle at top left, #f8fafc, #e2e8f0);
     padding: 20px;
 }
-
+#logoimage{
+    width: 45px;
+}
 .login-card {
     background: var(--white);
     width: 100%;
@@ -570,16 +577,16 @@ input[type=number]::-webkit-outer-spin-button {
 .logo-placeholder {
     width: 60px;
     height: 60px;
-    background: var(--primary);
+    /* background: var(--primary); */
     color: white;
-    border-radius: 14px;
+    border-radius: 50%;
     display: flex;
     align-items: center;
     justify-content: center;
     font-weight: 800;
     font-size: 1.2rem;
     margin: 0 auto 1.5rem auto;
-    box-shadow: 0 10px 15px -3px rgba(79, 70, 229, 0.3);
+    box-shadow: 0 0 15px -2px rgba(79, 70, 229, 0.3);
 }
 
 .login-header h1 {

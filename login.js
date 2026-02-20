@@ -22,7 +22,7 @@ form.addEventListener("submit",(e)=>{
     
         pswError.innerText=error
     }
-    if(username.value || password.value==''){
+    if(username.value=='' || password.value==''){
         alert("Enter username and password")
     }
 
